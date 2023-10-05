@@ -16,7 +16,7 @@ app.post('/sendEmail', async (req, res) => {
 
   const msg = {
     to: email,
-    from: 'your-email@example.com', // Replace with your email
+    from: 'eabummings@gmail.com', // Replace with your email
     subject: 'Your Time Capsule',
     text: message,
   };
@@ -30,6 +30,6 @@ app.post('/sendEmail', async (req, res) => {
   }
 });
 
-app.listen(3001, () => {
-  console.log('🎾 Server running on http://localhost:3001 🎾');
+app.listen(process.env.PORT, () => {
+  console.log(`🎾 Server up and running on port ${process.env.PORT}! 🎾`);
 });
